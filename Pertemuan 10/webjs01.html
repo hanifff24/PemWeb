@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function fungsiku(){
+                let warna = document.getElementById("nf1").value; console.log("anda pilih warna : ")
+                
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            pilih warna :
+            <select name="warna" onchange="fungsiku()" id="nf1">
+                <option value="red">merah</option>
+                <option value="blue">biru</option>
+                <option value="green">hijau</option>
+                <option value="yellow">kuning</option>
+            </select>
+            <hr>
+            Masukan nilai $ :
+                <input type="text" id="dollar" onekeyup="kursrupiah()">
+            Masukan nilai Rp :
+                <input type="text">
+        </form>
+    </body>
+</html>
