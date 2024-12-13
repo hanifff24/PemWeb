@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Mata Uang</title>
+</head>
+<body>
+    <!--
+    Prosedur :
+    1. Membuat input untuk rupiah/dollar
+    2. tag P untuk menampung hasil 
+    3. Deklarasi variable dollar/rupiah untuk menampung nilai input dollar/rupiah
+    4. Hitung pembagian atau perkalian dari dollar ke rupiah atau sebaliknya     
+    -->
+
+    <h1>Konversi rupiah ke dollar</h1>
+
+    <label for="rupiah">Masukkan nilai rupiah</label>
+    <input type="number" id="rupiah" onkeyup="rupiahkedollar()">
+
+    <p>Hasil konversi ke dollar : <span id="hasildollar"></span></p>
+
+    <h1>Konversi dollar ke rupiah</h1>
+
+    <label for="dollar">Masukkan nilai dollar</label>
+    <input type="number" id="dollar" onkeyup="dollarkerupiah()">
+
+    <p>Hasil konversi ke rupiah : <span id="hasilrupiah"></span></p>
+
+    <!-- JavaSciprt -->
+    <script>
+        function rupiahkedollar(){
+            let rupiah = document.getElementById('rupiah').value
+            let hasildollar = rupiah / 14650
+            document.getElementById('hasildollar').innerHTML = hasildollar.toFixed(2)
+        }
+
+        function dollarkerupiah(){
+            let dollar = document.getElementById('dollar').value
+            let hasilrupiah = dollar * 14650
+            document.getElementById('hasilrupiah').innerHTML = hasilrupiah
+        }
+    </script>
+</body>
+</html>
